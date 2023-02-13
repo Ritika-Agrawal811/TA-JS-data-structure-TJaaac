@@ -1,9 +1,9 @@
 ```js
 let user = {
-  name: 'Arya',
-  sibling: ['Robb', 'Ryan', 'John'],
+  name: "Arya",
+  sibling: ["Robb", "Ryan", "John"],
 };
-let allBrothers = ['Robb', 'Ryan', 'John'];
+let allBrothers = ["Robb", "Ryan", "John"];
 let brothersCopy = user.sibling;
 let usename = user.name;
 let newUser = user;
@@ -33,3 +33,19 @@ let newUser = user;
 - `brothersCopy[0] === user.sibling[0];`
 - `brothersCopy[1] === user.sibling[1];`
 - `user.sibling[1] === newUser.sibling[1];`
+
+console.log(user == newUser); // true
+console.log(user === newUser); // true
+console.log(user.name === newUser.name); // true
+console.log(user.name == newUser.name); // true
+console.log(user.sibling == newUser.sibling); // true
+console.log(user.sibling === newUser.sibling); // true
+console.log(user.sibling == allBrothers); // false
+console.log(user.sibling === allBrothers); // false
+console.log(brothersCopy === allBrothers); // false
+console.log(brothersCopy == allBrothers); // false
+console.log(brothersCopy == user.sibling); // true
+console.log(brothersCopy === user.sibling); // true
+console.log(brothersCopy[0] === user.sibling[0]); // true
+console.log(brothersCopy[1] === user.sibling[1]); // true
+console.log(user.sibling[1] === newUser.sibling[1]); // true
